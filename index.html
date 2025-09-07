@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Loan Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="calculator-container">
+    <h1>Advanced Loan Calculator</h1>
+
+    <div class="input-section">
+      <div class="input-group">
+        <label for="loanAmount">Enter Loan Amount</label>
+        <input type="number" id="loanAmount" placeholder="e.g., 200000">
+      </div>
+      <div class="input-group">
+        <label for="interestRate">Enter Interest Rate (%)</label>
+        <input type="number" id="interestRate" readonly>
+      </div>
+      <div class="input-group">
+        <label for="loanTenure">Enter Loan Tenure (Months)</label>
+        <input type="number" id="loanTenure" placeholder="e.g., 42">
+      </div>
+      <button onclick="calculateLoan()">Calculate</button>
+    </div>
+
+    <div class="results-section">
+      <h2>Calculated Results</h2>
+      <div class="result-box">
+        <p>Final Amount</p>
+        <p id="finalAmount"></p>
+      </div>
+      <div class="result-box">
+        <p>First Ins (LI)</p>
+        <p id="liAmount"></p>
+      </div>
+      <div class="result-box">
+        <p>Total Ins</p>
+        <p id="totalInsAmount"></p>
+      </div>
+      <div class="result-box">
+        <p>Total Amount With Interest</p>
+        <p id="totalAmountWithInterest"></p>
+      </div>
+      <div class="result-box">
+        <p>EMI</p>
+        <p id="emi"></p>
+      </div>
+      <div class="result-box">
+        <p>TENURE IN YEAR</p>
+        <p id="tenureInYears"></p>
+      </div>
+    </div>
+
+    <div class="interest-details-section">
+      <h2>Interest Details</h2>
+      <div class="result-box">
+        <p>Flat Interest Rate PA (%)</p>
+        <p id="flatRatePA"></p>
+      </div>
+      <div class="result-box">
+        <p>Flat Interest Rate PM (%)</p>
+        <p id="flatRatePM"></p>
+      </div>
+      <div class="result-box">
+        <p>Total Interest Amount</p>
+        <p id="totalInterestAmount"></p>
+      </div>
+      <div class="result-box">
+        <p>Yearly Interest Amount</p>
+        <p id="yearlyInterestAmount"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

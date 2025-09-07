@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.calculator-container {
+  background-color: #008080; /* Teal/Cyan-like color */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #ffd700; /* Gold color for headings */
+  margin-top: 0;
+}
+
+.input-section, .results-section, .interest-details-section {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #90ee90; /* Light green for labels */
+}
+
+.input-group input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+}
+
+button {
+  background-color: #ffd700; /* Gold color for button */
+  color: #000;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffc400;
+}
+
+.result-box {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-box p:first-child {
+  font-weight: bold;
+}
+
+.result-box p:last-child {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Mobile responsive design */
+@media screen and (max-width: 768px) {
+  .calculator-container {
+    width: 95%;
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  .input-section, .results-section, .interest-details-section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .result-box {
+    padding: 12px;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  
+  .result-box p {
+    margin: 0;
+  }
+  
+  .result-box p:first-child {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  
+  .result-box p:last-child {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .input-group input {
+    padding: 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  h2 {
+    font-size: 1.4em;
+  }
+}
+
+/* Tablet responsive design */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .calculator-container {
+    width: 85%;
+    padding: 25px;
+  }
+  
+  .result-box {
+    padding: 14px;
+  }
+}
+
+/* Large screen optimization */
+@media screen and (min-width: 1025px) {
+  .calculator-container {
+    width: 80%;
+    max-width: 700px;
+    padding: 35px;
+  }
+  
+  .result-box {
+    padding: 18px;
+  }
+  
+  .result-box p:last-child {
+    font-size: 1.3em;
+  }
+}
